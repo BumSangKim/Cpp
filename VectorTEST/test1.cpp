@@ -3,7 +3,9 @@
 int main() {
 	//cout << "hello world" << endl;
 	vector<int> v;
+#if 0 // If you want to know the relationship between the reserve function and capacity, change it to 1 and test.
 	v.reserve(2000);
+#endif
 	for ( int i = 0 ; i < 50 ; i++ ) {
 		v.emplace_back(10);
 		cout << "start addr     \t:" << v.data() << endl;

@@ -7,10 +7,10 @@ fi
 BUILD_FILE=test${PREFIX}.cpp
 EXECUTE_FILE=test${PREFIX}.exe
 
-g++ ${BUILD_FILE} -o ${EXECUTE_FILE} -std=c++17 -I ./
+g++ -g ${BUILD_FILE} -o ${EXECUTE_FILE} -std=c++17 -I ./
 
 if test -f ${EXECUTE_FILE};
 then
-	./${EXECUTE_FILE}
+	gdb ./${EXECUTE_FILE}
 	rm -rf ${EXECUTE_FILE}
 fi
