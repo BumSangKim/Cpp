@@ -1,8 +1,18 @@
-g++ test.cpp -o test.exe -std=c++17
+PREFIX=1
 
-if test -f './test.exe';
-then
-	./test.exe
-	rm -rf test.exe
+if [ "$1" != "" ]; then
+	PREFIX="$1"
 fi
 
+BUILD_FILE=test${PREFIX}.cpp
+EXECUTE_FILE=test${PREFIX}.exe
+
+echo ${EXECUTE_FILE} ${BUILD_FILE}
+
+g++ ${BUILD_FILE} -o ${EXECUTE_FILE} -std=c++17 -I ./
+
+if test -f ${EXECUTE_FILE};
+then
+	./${EXECUTE_FILE}
+	rm -rf ${EXECUTE_FILE}
+fi

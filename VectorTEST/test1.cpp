@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-
-using namespace std;
+#include <test.h>
 
 int main() {
 	//cout << "hello world" << endl;
