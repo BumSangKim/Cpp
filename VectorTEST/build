@@ -1,0 +1,8 @@
+g++ test.cpp -o test.exe -std=c++17
+
+if test -f './test.exe';
+then
+	./test.exe
+	rm -rf test.exe
+fi
+
